@@ -1,0 +1,6 @@
+D:\Orlinovski Tapotii\MultiArrays\FillTheMatrix\obj\Debug\01.FillTheMatrix.csprojResolveAssemblyReference.cache
+D:\Orlinovski Tapotii\MultiArrays\FillTheMatrix\bin\Debug\FillTheMatrix.exe.config
+D:\Orlinovski Tapotii\MultiArrays\FillTheMatrix\bin\Debug\FillTheMatrix.exe
+D:\Orlinovski Tapotii\MultiArrays\FillTheMatrix\bin\Debug\FillTheMatrix.pdb
+D:\Orlinovski Tapotii\MultiArrays\FillTheMatrix\obj\Debug\FillTheMatrix.exe
+D:\Orlinovski Tapotii\MultiArrays\FillTheMatrix\obj\Debug\FillTheMatrix.pdb

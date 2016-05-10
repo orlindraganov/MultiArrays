@@ -1,0 +1,6 @@
+D:\Orlinovski Tapotii\MultiArrays\SequenceInMatrix\bin\Debug\SequenceInMatrix.exe.config
+D:\Orlinovski Tapotii\MultiArrays\SequenceInMatrix\obj\Debug\03.SequenceInMatrix.csprojResolveAssemblyReference.cache
+D:\Orlinovski Tapotii\MultiArrays\SequenceInMatrix\bin\Debug\SequenceInMatrix.exe
+D:\Orlinovski Tapotii\MultiArrays\SequenceInMatrix\bin\Debug\SequenceInMatrix.pdb
+D:\Orlinovski Tapotii\MultiArrays\SequenceInMatrix\obj\Debug\SequenceInMatrix.exe
+D:\Orlinovski Tapotii\MultiArrays\SequenceInMatrix\obj\Debug\SequenceInMatrix.pdb

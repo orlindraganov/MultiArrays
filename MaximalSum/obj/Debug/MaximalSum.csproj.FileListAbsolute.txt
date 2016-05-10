@@ -1,0 +1,5 @@
+D:\Orlinovski Tapotii\MultiArrays\MaximalSum\bin\Debug\MaximalSum.exe.config
+D:\Orlinovski Tapotii\MultiArrays\MaximalSum\bin\Debug\MaximalSum.exe
+D:\Orlinovski Tapotii\MultiArrays\MaximalSum\bin\Debug\MaximalSum.pdb
+D:\Orlinovski Tapotii\MultiArrays\MaximalSum\obj\Debug\MaximalSum.exe
+D:\Orlinovski Tapotii\MultiArrays\MaximalSum\obj\Debug\MaximalSum.pdb

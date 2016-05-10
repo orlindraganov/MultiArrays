@@ -4,3 +4,9 @@ D:\Orlinovski Tapotii\MultiArrays\SequenceInMatrix\bin\Debug\SequenceInMatrix.ex
 D:\Orlinovski Tapotii\MultiArrays\SequenceInMatrix\bin\Debug\SequenceInMatrix.pdb
 D:\Orlinovski Tapotii\MultiArrays\SequenceInMatrix\obj\Debug\SequenceInMatrix.exe
 D:\Orlinovski Tapotii\MultiArrays\SequenceInMatrix\obj\Debug\SequenceInMatrix.pdb
+D:\Orlin\CSharpHomeworks\MultiArrays\SequenceInMatrix\bin\Debug\SequenceInMatrix.exe.config
+D:\Orlin\CSharpHomeworks\MultiArrays\SequenceInMatrix\obj\Debug\SequenceInMatrix.exe
+D:\Orlin\CSharpHomeworks\MultiArrays\SequenceInMatrix\obj\Debug\SequenceInMatrix.pdb
+D:\Orlin\CSharpHomeworks\MultiArrays\SequenceInMatrix\bin\Debug\SequenceInMatrix.exe
+D:\Orlin\CSharpHomeworks\MultiArrays\SequenceInMatrix\bin\Debug\SequenceInMatrix.pdb
+D:\Orlin\CSharpHomeworks\MultiArrays\SequenceInMatrix\obj\Debug\03.SequenceInMatrix.csprojResolveAssemblyReference.cache

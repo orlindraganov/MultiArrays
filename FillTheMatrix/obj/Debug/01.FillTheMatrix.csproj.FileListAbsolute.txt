@@ -4,3 +4,6 @@ D:\Orlinovski Tapotii\MultiArrays\FillTheMatrix\bin\Debug\FillTheMatrix.exe
 D:\Orlinovski Tapotii\MultiArrays\FillTheMatrix\bin\Debug\FillTheMatrix.pdb
 D:\Orlinovski Tapotii\MultiArrays\FillTheMatrix\obj\Debug\FillTheMatrix.exe
 D:\Orlinovski Tapotii\MultiArrays\FillTheMatrix\obj\Debug\FillTheMatrix.pdb
+D:\Orlin\CSharpHomeworks\MultiArrays\FillTheMatrix\bin\Debug\FillTheMatrix.exe.config
+D:\Orlin\CSharpHomeworks\MultiArrays\FillTheMatrix\obj\Debug\FillTheMatrix.exe
+D:\Orlin\CSharpHomeworks\MultiArrays\FillTheMatrix\obj\Debug\FillTheMatrix.pdb

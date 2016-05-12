@@ -125,183 +125,138 @@ class SequenceInMatrix
             }
         }
 
+        //search for small triangles
 
+        for (int searches = 1; searches < Math.Min(sizes[0], sizes[1]); searches++)
+        {
+            for (int checks = 0; checks < searches; checks++)
+            {
+                if (matrix[checks, sizes[0] - 1 - searches + checks] == currentValue)
+                {
+                    currentLength++;
+                }
+                else
+                {
+                    currentLength = 1;
+                    currentValue = matrix[checks, sizes[0] - 1 - searches + checks];
+                }
+                if (currentLength > maxLength)
+                {
+                    maxLength = currentLength;
+                }
+            }
+            currentValue = null;
 
+            for (int checks = 0; checks < searches; checks++)
+            {
+                if (matrix[sizes[1] - 1 - searches + checks, checks] == currentValue)
+                {
+                    currentLength++;
+                }
+                else
+                {
+                    currentLength = 1;
+                    currentValue = matrix[sizes[1] - 1 - searches + checks, checks];
+                }
+                if (currentLength > maxLength)
+                {
+                    maxLength = currentLength;
+                }
+            }
 
+            currentValue = null;
+        }
 
+        //Search diag left
 
+        if (sizes[1] > sizes[0])
+        {
+            for (int searches = 0; searches < sizes[1] - sizes[0] + 1; searches++)
+            {
+                for (int checks = 0; checks < sizes[0]; checks++)
+                {
+                    if (matrix[searches + checks, sizes[0] - 1 - checks] == currentValue)
+                    {
+                        currentLength++;
+                    }
+                    else
+                    {
+                        currentLength = 1;
+                        currentValue = matrix[searches + checks, sizes[0] - 1 - checks];
+                    }
+                    if (currentLength > maxLength)
+                    {
+                        maxLength = currentLength;
+                    }
+                }
+                currentValue = null;
+            }
+        }
+        else
+        {
+            for (int searches = 0; searches < sizes[0] - sizes[1] + 1; searches++)
+            {
+                for (int checks = 0; checks < sizes[1]; checks++)
+                {
+                    if (matrix[sizes[1] - 1 - checks, searches + checks] == currentValue)
+                    {
+                        currentLength++;
+                    }
+                    else
+                    {
+                        currentLength = 1;
+                        currentValue = matrix[sizes[1] - 1 - checks, checks + searches];
+                    }
+                    if (currentLength > maxLength)
+                    {
+                        maxLength = currentLength;
+                    }
+                }
+                currentValue = null;
+            }
+        }
 
+        //search for small triangles
 
+        for (int searches = 1; searches < Math.Min(sizes[0], sizes[1]); searches++)
+        {
+            for (int checks = 0; checks < searches; checks++)
+            {
+                if (matrix[checks, searches - checks] == currentValue)
+                {
+                    currentLength++;
+                }
+                else
+                {
+                    currentLength = 1;
+                    currentValue = matrix[checks, searches - checks];
+                }
+                if (currentLength > maxLength)
+                {
+                    maxLength = currentLength;
+                }
+            }
+            currentValue = null;
 
+            for (int checks = 0; checks < searches; checks++)
+            {
+                if (matrix[sizes[1] - 1 - searches + checks, sizes[0] - 1 - checks] == currentValue)
+                {
+                    currentLength++;
+                }
+                else
+                {
+                    currentLength = 1;
+                    currentValue = matrix[sizes[1] - 1 - searches + checks, sizes[0] - 1 - checks];
+                }
+                if (currentLength > maxLength)
+                {
+                    maxLength = currentLength;
+                }
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        ////Search for diagonal right
-
-
-        //for (int steps = 0; (steps < sizes[0]) ^ (steps < sizes[1]); steps++)
-        //{
-        //    //Lower Left
-        //    for (int checks = 0; checks <= steps; checks++)
-        //    {
-        //        if (matrix[checks, sizes[0] - 1 - steps + checks] == currentValue)
-        //        {
-        //            currentLength++;
-        //        }
-        //        else
-        //        {
-        //            currentLength = 1;
-        //            currentValue = matrix[checks, sizes[0] - 1 - steps + checks];
-        //        }
-        //        if (currentLength > maxLength)
-        //        {
-        //            maxLength = currentLength;
-        //        }
-        //    }
-        //    currentValue = null;
-
-        //    //Upper right
-        //    for (int checks = 0; checks <= steps; checks++)
-        //    {
-        //        if (matrix[sizes[1] + checks - steps, checks] == currentValue)
-        //        {
-        //            currentLength++;
-        //        }
-        //        else
-        //        {
-        //            currentLength = 1;
-        //            currentValue = matrix[sizes[1] + checks - steps, checks];
-        //        }
-        //        if (currentLength > maxLength)
-        //        {
-        //            maxLength = currentLength;
-        //        }
-        //    }
-        //    currentValue = null;
-        //}
-        ////Middle
-        //int rowOffset = 0;
-        //int colOffset = 0;
-        //for (int steps = 0; steps < 1 + Math.Abs(sizes[0] - sizes[1]); steps++)
-        //{
-        //    for (int checks = 0; checks < Math.Min(sizes[0], sizes[1]); checks++)
-        //    {
-        //        if (matrix[checks + rowOffset, checks + colOffset] == currentValue)
-        //        {
-        //            currentLength++;
-        //        }
-        //        else
-        //        {
-        //            currentLength = 1;
-        //            currentValue = matrix[checks + rowOffset, checks + colOffset];
-        //        }
-        //        if (currentLength > maxLength)
-        //        {
-        //            maxLength = currentLength;
-        //        }
-        //    }
-        //    if (sizes[1] > sizes[0])
-        //    {
-        //        rowOffset = steps;
-        //    }
-        //    else
-        //    {
-        //        colOffset = steps;
-        //    }
-        //    currentValue = null;
-        //}
-
-
-        ////Search for diagonal left
-        //rowOffset = 0;
-        //colOffset = 0;
-        //for (int steps = 0; (steps < sizes[0]) ^ (steps < sizes[1]); steps++)
-        //{
-        //    //Upper Left
-        //    for (int checks = 0; checks <= steps; checks++)
-        //    {
-        //        if (matrix[checks, steps - checks] == currentValue)
-        //        {
-        //            currentLength++;
-        //        }
-        //        else
-        //        {
-        //            currentLength = 1;
-        //            currentValue = matrix[checks, steps - checks];
-        //        }
-        //        if (currentLength > maxLength)
-        //        {
-        //            maxLength = currentLength;
-        //        }
-        //    }
-        //    currentValue = null;
-
-        //    //Lower right
-        //    for (int checks = 0; checks <= steps; checks++)
-        //    {
-        //        if (matrix[sizes[1] - 1 + checks - steps, sizes[0] - 1 - checks] == currentValue)
-        //        {
-        //            currentLength++;
-        //        }
-        //        else
-        //        {
-        //            currentLength = 1;
-        //            currentValue = matrix[sizes[1] - 1 + checks - steps, sizes[0] - 1 - checks];
-        //        }
-        //        if (currentLength > maxLength)
-        //        {
-        //            maxLength = currentLength;
-        //        }
-        //    }
-        //    currentValue = null;
-        //}
-        ////Middle
-        //for (int steps = 0; steps < 1 + Math.Abs(sizes[0] - sizes[1]); steps++)
-        //{
-        //    for (int checks = 0; checks < Math.Min(sizes[0], sizes[1]); checks++)
-        //    {
-        //        if (matrix[sizes[1] - checks - rowOffset - 1, checks + colOffset] == currentValue)
-        //        {
-        //            currentLength++;
-        //        }
-        //        else
-        //        {
-        //            currentLength = 1;
-        //            currentValue = matrix[sizes[1] - checks - rowOffset - 1, checks + colOffset];
-        //        }
-        //        if (currentLength > maxLength)
-        //        {
-        //            maxLength = currentLength;
-        //        }
-        //    }
-        //    if (sizes[1] > sizes[0])
-        //    {
-        //        rowOffset = steps;
-        //    }
-        //    else
-        //    {
-        //        colOffset = steps;
-        //    }
-        //    currentValue = null;
-        //}
+            currentValue = null;
+        }
 
 
 

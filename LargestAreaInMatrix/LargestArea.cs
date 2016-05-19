@@ -33,7 +33,7 @@ class LargestAreaInMatrix
         }
         short max = 1;
         short counter = 0;
-        short? curent;
+        short? current;
         for (short i = 0; i < lines; i++)
         {
             for (short j = 0; j < members; j++)
@@ -47,10 +47,10 @@ class LargestAreaInMatrix
                 {
                     //unckeched number
                     counter = 1;
-                    curent = matrix[i][j];
+                    current = matrix[i][j];
                     matrix[i][j] = null;
                     //with null mark all numbers in curent sequence
-                    counter = Finder(matrix, i, j, ref curent, ref counter);
+                    counter = Finder(matrix, i, j, ref current, ref counter);
                     if (counter > max)
                     {
                         max = counter;
@@ -62,31 +62,31 @@ class LargestAreaInMatrix
         Console.WriteLine(max);
     }
 
-    static short Finder(short?[][] matrix, short row, short col, ref short? curent, ref short counter)
+    static short Finder(short?[][] matrix, short row, short col, ref short? current, ref short counter)
     {
-        if (col > 0 && matrix[row][col - 1] == curent) //left
+        if (col > 0 && matrix[row][col - 1] == current) //left
         {
             counter++;
             matrix[row][col - 1] = null;
-            counter = Finder(matrix, row, (short)(col - 1), ref curent, ref counter);
+            counter = Finder(matrix, row, (short)(col - 1), ref current, ref counter);
         }
-        if (row < matrix.Length - 1 && matrix[row + 1][col] == curent) //down
+        if (row < matrix.Length - 1 && matrix[row + 1][col] == current) //down
         {
             counter++;
             matrix[row + 1][col] = null;
-            counter = Finder(matrix, (short)(row + 1), col, ref curent, ref counter);
+            counter = Finder(matrix, (short)(row + 1), col, ref current, ref counter);
         }
-        if (col < matrix[row].Length - 1 && matrix[row][col + 1] == curent) //right
+        if (col < matrix[row].Length - 1 && matrix[row][col + 1] == current) //right
         {
             counter++;
             matrix[row][col + 1] = null;
-            counter = Finder(matrix, row, (short)(col + 1), ref curent, ref counter);
+            counter = Finder(matrix, row, (short)(col + 1), ref current, ref counter);
         }
-        if (row > 0 && matrix[row - 1][col] == curent) //up
+        if (row > 0 && matrix[row - 1][col] == current) //up
         {
             counter++;
             matrix[row - 1][col] = null;
-            counter = Finder(matrix, (short)(row - 1), col, ref curent, ref counter);
+            counter = Finder(matrix, (short)(row - 1), col, ref current, ref counter);
         }
         return counter;
     }
